@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  sqlServer:
+    container_name: sql_server
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    ports:
+       - 1433:1433
+    environment:
+       - ACCEPT_EULA=Y # acepta los terminos y condiciones d
+       - MSSQL_SA_PASSWORD=MyPassword*1234 # password para el SA
